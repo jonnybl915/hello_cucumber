@@ -18,6 +18,7 @@ gem 'rake', '~> 12.0.0'
 group :development, :test do
   gem 'byebug'
   gem 'faker'
+  gem 'launchy'
   gem 'pry-rails'
   gem 'rspec-rails'
 end
