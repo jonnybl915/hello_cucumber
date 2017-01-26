@@ -1,5 +1,5 @@
 Given(/^I'm a user$/) do
- @user = User.create(email: "jon@example5.com")
+ @user = User.create!(email: 'jon@example5.com', password: 'password')
 end
 
 When(/^I favorite a post$/) do
@@ -8,5 +8,5 @@ When(/^I favorite a post$/) do
 end
 
 Then(/^that post is in my favorites$/) do
-  expect(@user.favorites.include?(@post)).to eq true
+  expect(@user.favorite_posts.include?(@post)).to eq true
 end
